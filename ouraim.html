@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ouraim.css">
+</head>
+<body>
+       <!-- Header Section -->
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="Company Logo">
+        <span class="logo-text">Cinco's Closet.</span>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="ouraim.html">Our Aim</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="login.html">Log In</a></li>
+        </ul>
+    </nav>
+
+    <div style="position: relative;">
+        <input type="text" id="searchInput" placeholder="Search for words..." />
+        <button id="searchButton">Search</button>
+        <div id="resultsBox" style="display: none;">
+            <!-- Matching results will appear here -->
+        </div>
+    </div>
+    
+    <style>
+        #resultsBox {
+            position: absolute; /* Keeps it relative to the search bar container */
+            top: 40px; /* Adjusts position below the search bar */
+            left: 0; /* Aligns with the search bar */
+            width: 100%; /* Matches the width of the container */
+            max-height: 200px; /* Limits the height */
+            overflow-y: auto; /* Adds scrolling if needed */
+            background-color: #f9f9f9; /* Light background */
+            border: 1px solid #ccc; /* Border for visibility */
+            padding: 10px; /* Spacing inside */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            z-index: 1000; /* Ensures it appears above other elements */
+        }
+    
+        #resultsBox div {
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer; /* Makes it clear that items are clickable */
+        }
+    
+        #resultsBox div:hover {
+            background-color: #eaeaea; /* Highlight on hover */
+        }
+    
+        #resultsBox div:last-child {
+            border-bottom: none;
+        }
+    </style>
+    
+    
+
+    <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="https://www.instagram.com/5s_closet?igsh=MWZ6ZGh2eTllZGxjOA==">Instagram</a>
+        <a href="https://x.com/5s_Closet">Twitter</a>
+    </div>
+</header>
+
+
+    <br>    <br>    <br>
+
+
+    <main class="our-aim">
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>
+                To provide an inclusive platform that brings affordable, pre-loved fashion to communities, promoting sustainable shopping habits and reducing waste. 
+                We aim to curate a diverse collection of high-quality second-hand items, empowering individuals to express their style while making environmentally conscious choices.
+            </p>
+        </section>
+        <section class="vision">
+            <h2>Our Vision</h2>
+            <p>
+                To become the leading online destination for second-hand fashion, fostering a culture of sustainability and creativity. 
+                We envision a future where pre-loved clothing is not only a cost-effective choice but also a celebrated movement that inspires global environmental stewardship and responsible consumerism.
+            </p>
+        </section>
+        <section class="values">
+            <h2>Our Core Values</h2>
+            <ul>
+                <li><strong>Integrity:</strong> We act with honesty, transparency, and a commitment to ethical practices.</li>
+                <li><strong>Innovation:</strong> We embrace creativity and leverage technology to enhance the customer experience.</li>
+                <li><strong>Sustainability:</strong> We are dedicated to reducing waste and promoting eco-friendly shopping solutions.</li>
+                <li><strong>Community:</strong> We prioritize building strong relationships with customers and fostering a sense of belonging.</li>
+                <li><strong>Quality:</strong> We ensure that every item we offer meets high standards of value and appeal.</li>
+            </ul>
+        </section>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-contact">
+            <p>Contact Us: Cjohncarlo160@gmail.com | +63 9690419334</p>
+            <p>San Mateo, Rizal</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=100071407065060&mibextid=ZbWKwL"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/5s_Closet"><img src="img/twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/5s_closet?igsh=MWZ6ZGh2eTllZGxjOA=="><img src="img/instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="footer-newsletter">
+            <form action="/subscribe" method="post">
+                <label for="email">Subscribe to our newsletter:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Cinco's Closet. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="Java script/aboutus.js"> </script>
+</body>
+</html>

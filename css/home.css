@@ -1,0 +1,424 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #333, #444); /* Gradient background */
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust the body to avoid content being hidden behind the fixed header */
+body {
+    margin-top: 80px; /* Adjust this value based on the header height */
+}
+
+/* Adjust the body to avoid content being hidden behind the fixed header */
+body {
+    margin-top: 80px; /* Adjust this value based on the header height */
+}
+
+/* Logo Section */
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 80px; /* Set logo width */
+    height: auto;
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-left: 10px; /* Adds space between logo image and text */
+}
+
+/* Navigation Section */
+header nav {
+    margin-left: auto; /* Pushes nav to the right */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-right: 15px; /* Spacing between items */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px; /* Smaller font size */
+    letter-spacing: 1px;
+    font-weight: normal; /* Lighter font weight */
+}
+
+header nav ul li a:hover {
+    color: #e74c3c; /* Hover effect for menu items */
+}
+
+/* Call to Action Button */
+header .cta-btn a {
+    background: #e74c3c;
+    padding: 7px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+header .cta-btn a:hover {
+    background: #c0392b;
+}
+
+/* Social Media Icons */
+header .social-media {
+    display: flex;
+    align-items: center;
+}
+
+header .social-media a {
+    color: white;
+    margin-left: 15px;
+    font-size: 12px; /* Smaller font size for social media links */
+    transition: color 0.3s ease;
+}
+
+header .social-media a:hover {
+    color: #e74c3c;
+}
+
+/* Search Bar Section */
+header .search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 30px; /* Adds spacing between items */
+}
+
+header .search-bar input {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+header .search-bar input:focus {
+    border-color: #e74c3c;
+    outline: none;
+}
+
+header .search-bar button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header .search-bar button:hover {
+    background-color: #c0392b;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('../img/background.jpg') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.hero h2 {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+.hero button {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #e67e22;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.hero button:hover {
+    background-color: #d35400;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 60px 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+.about p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.6;
+}
+.about button {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.about button:hover {
+    background-color: #2980b9;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 60px 30px;
+    background-color: #f9f9f9;
+}
+.services .service-item {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 22%;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.services .service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.services .service-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #3498db;
+}
+.services button {
+    padding: 12px 25px;
+    background-color: #2ecc71;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.services button:hover {
+    background-color: #27ae60;
+}
+
+/* Testimonials Section */
+.testimonial {
+    position: relative;  /* Ensures that the content can be layered on top of the background */
+    background-image: url('path-to-your-image.jpg');
+    background-size: cover;  /* Ensures the image covers the entire container */
+    background-position: center;  /* Centers the background image */
+    color: white;  /* Adjust text color to be visible on the background */
+    padding: 20px;  /* Adds padding inside the container */
+    border-radius: 10px;  /* Optional: adds rounded corners */
+    width: 100%;  /* Ensures it takes up the full width of its container */
+    max-width: 600px;  /* Optional: restricts width */
+    margin: auto;  /* Centers the testimonial container */
+    text-align: center;  /* Centers the text inside */
+}
+
+.testimonial-content {
+    background-color: rgba(0, 0, 0, 0.5);  /* Adds a dark overlay for better text readability */
+    padding: 20px;
+    border-radius: 8px;  /* Optional: makes the content box have rounded corners */
+}
+
+.testimonials blockquote {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+}
+.testimonials cite {
+    display: block;
+    font-size: 18px;
+    color: #3498db;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    padding: 60px 30px;
+    background-color: #e67e22;
+    color: white;
+}
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.cta button {
+    padding: 15px 35px;
+    font-size: 20px;
+    background-color: #fff;
+    border: none;
+    color: #e67e22;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.cta button:hover {
+    background-color: #f39c12;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-contact,
+footer .footer-links,
+footer .footer-social,
+footer .footer-newsletter,
+footer .footer-accessibility {
+    margin-bottom: 15px;
+}
+
+footer img {
+    width: 20px;
+    margin: 0 5px;
+}
+
+footer form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer input[type="email"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    width: 250px;
+}
+
+footer button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+    .services .service-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .hero h2 {
+        font-size: 32px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+    .about h2 {
+        font-size: 28px;
+    }
+    .about p {
+        font-size: 18px;
+    }
+    .cta h2 {
+        font-size: 28px;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .social-media {
+        margin-top: 15px;
+    }
+}

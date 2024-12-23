@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+       <!-- Header Section -->
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="Company Logo">
+        <span class="logo-text">Cinco's Closet.</span>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="ouraim.html">Our Aim</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="login.html">Log In</a></li>
+        </ul>
+    </nav>
+
+    <div style="position: relative;">
+        <input type="text" id="searchInput" placeholder="Search for words..." />
+        <button id="searchButton">Search</button>
+        <div id="resultsBox" style="display: none;">
+            <!-- Matching results will appear here -->
+        </div>
+    </div>
+    
+    <style>
+        #resultsBox {
+            position: absolute; /* Keeps it relative to the search bar container */
+            top: 40px; /* Adjusts position below the search bar */
+            left: 0; /* Aligns with the search bar */
+            width: 100%; /* Matches the width of the container */
+            max-height: 200px; /* Limits the height */
+            overflow-y: auto; /* Adds scrolling if needed */
+            background-color: #f9f9f9; /* Light background */
+            border: 1px solid #ccc; /* Border for visibility */
+            padding: 10px; /* Spacing inside */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            z-index: 1000; /* Ensures it appears above other elements */
+        }
+    
+        #resultsBox div {
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer; /* Makes it clear that items are clickable */
+        }
+    
+        #resultsBox div:hover {
+            background-color: #eaeaea; /* Highlight on hover */
+        }
+    
+        #resultsBox div:last-child {
+            border-bottom: none;
+        }
+    </style>
+    
+    
+
+    <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="https://www.instagram.com/5s_closet?igsh=MWZ6ZGh2eTllZGxjOA==">Instagram</a>
+        <a href="https://x.com/5s_Closet">Twitter</a>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Transform Your Business...</h2>
+            <p>Innovative solutions for growth</p>
+            <button>Get Started</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>We specialize in delivering custom solutions to help businesses grow.</p>
+        <button>Learn More</button>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <blockquote>"Great service!" - Customer A</blockquote>
+        <blockquote>"This product is amazing!" - Customer B</blockquote>
+    </section>
+
+
+    <!-- Secondary CTA Section -->
+    <section class="cta">
+        <h2>Get started with us today!</h2>
+        <button>Contact Us</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-contact">
+            <p>Contact Us: Cjohncarlo160@gmail.com | +63 9690419334</p>
+            <p>San Mateo, Rizal</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=100071407065060&mibextid=ZbWKwL"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/5s_Closet"><img src="img/twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/5s_closet?igsh=MWZ6ZGh2eTllZGxjOA=="><img src="img/instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="footer-newsletter">
+            <form action="/subscribe" method="post">
+                <label for="email">Subscribe to our newsletter:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Cinco's Closet. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="Java script/aboutus.js"> </script>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+
+    <br><br>
+
+      <!-- Header Section -->
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="Company Logo">
+        <span class="logo-text">Cinco's Closet.</span>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="ouraim.html">Our Aim</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="login.html">Log In</a></li>
+        </ul>
+    </nav>
+
+    <div style="position: relative;">
+        <input type="text" id="searchInput" placeholder="Search for words..." />
+        <button id="searchButton">Search</button>
+        <div id="resultsBox" style="display: none;">
+            <!-- Matching results will appear here -->
+        </div>
+    </div>
+    
+    <style>
+        #resultsBox {
+            position: absolute; /* Keeps it relative to the search bar container */
+            top: 40px; /* Adjusts position below the search bar */
+            left: 0; /* Aligns with the search bar */
+            width: 100%; /* Matches the width of the container */
+            max-height: 200px; /* Limits the height */
+            overflow-y: auto; /* Adds scrolling if needed */
+            background-color: #f9f9f9; /* Light background */
+            border: 1px solid #ccc; /* Border for visibility */
+            padding: 10px; /* Spacing inside */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            z-index: 1000; /* Ensures it appears above other elements */
+        }
+    
+        #resultsBox div {
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer; /* Makes it clear that items are clickable */
+        }
+    
+        #resultsBox div:hover {
+            background-color: #eaeaea; /* Highlight on hover */
+        }
+    
+        #resultsBox div:last-child {
+            border-bottom: none;
+        }
+    </style>
+    
+    
+
+    <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="https://www.instagram.com/5s_closet?igsh=MWZ6ZGh2eTllZGxjOA==">Instagram</a>
+        <a href="https://x.com/5s_Closet">Twitter</a>
+    </div>
+</header>
+
+
+
+<div class="Items">
+    <h1>Grocery Shop Items</h1>
+
+    <!-- Casual Wear Section -->
+    <section class="category">
+        <h2>Casual Wear</h2>
+        <p>"Where comfort meets confidence—casual never goes out of style."</p>
+        <ul>
+            <li>
+                <img src="img/C_T-shirt.jpg" alt="T-shirt" width="80">
+                T-shirt - For only ₱99.00
+                <button onclick="buyItem('T-shirt', 5, 1)">Buy</button>
+                <button onclick="addToCart('T-shirt', 5, 1)">Add to Cart</button>
+            </li>   
+            <li>
+                <img src="img/C_jeans.jpg" alt="Jeans" width="80">
+                Jeans - For only ₱149.00
+                <button onclick="buyItem('Jeans', 1, 1)">Buy</button>
+                <button onclick="addToCart('Jeans', 1, 1)">Add to Cart</button>
+            </li>
+            <li>
+                <img src="img/C_short.jpg" alt="Short" width="80">
+                Short  For only ₱120.00
+                <button onclick="buyItem('Short', 3, 1)">Buy</button>
+                <button onclick="addToCart('Short', 3, 1)">Add to Cart</button>
+            </li>
+            <li>
+                <img src="img/C_hoodie.jpg" alt="Hoodie" width="80">
+                Hoodie - For only ₱199.00
+                <button onclick="buyItem('Hoodie', 4, 1)">Buy</button>
+                <button onclick="addToCart('Hoodie', 4, 1)">Add to Cart</button>
+            </li>
+            <li>
+                <img src="img/C_sweatpants.jpg" alt="Sweatpants" width="80">
+                Sweatpants - For only ₱150.00
+                <button onclick="buyItem('Sweatpants', 2, 1)">Buy</button>
+                <button onclick="addToCart('Sweatpants', 2, 1)">Add to Cart</button>
+            </li>
+        </ul>
+    </section>
+
+<!-- Formal Wear Section -->
+<section class="category">
+    <h2>Formal Wear</h2>
+    <p>"Dress sharp, command respect—make every impression unforgettable."</p>
+    <ul>
+        <li>
+            <img src="img/F_suit.jpg" alt="Suit" width="80">
+            Suit - For only ₱999.00
+            <button onclick="buyItem('Suit', 3, 1)">Buy</button>
+            <button onclick="addToCart('Suit', 3, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/F_blazer.jpg" alt="Blazer" width="80">
+            Blazer - For only ₱499.00 
+            <button onclick="buyItem('Blazer', 2.5, 1)">Buy</button>
+            <button onclick="addToCart('Blazer', 2.5, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/F_dress shirt.jpg" alt="Dress shirt" width="80">
+            Dress shirt - For only ₱199.00 
+            <button onclick="buyItem('Dress shirt', 1.5, 1)">Buy</button>
+            <button onclick="addToCart('Dress shirt', 1.5, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/F_tie.jpg" alt="Tie" width="80">
+            Tie - For only ₱120.00 
+            <button onclick="buyItem('Tie', 2, 1)">Buy</button>
+            <button onclick="addToCart('Tie', 2, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/F_cocktail dress.jpg" alt="Cocktail dress" width="80">
+            Cheese - For only ₱450.00
+            <button onclick="buyItem('Cocktail dress', 5, 1)">Buy</button>
+            <button onclick="addToCart('Cocktail dress', 5, 1)">Add to Cart</button>
+        </li>
+    </ul>
+</section>
+
+            <!-- Sportswear/Activewear Section -->
+<section class="category">
+    <h2>Sportswear/Activewear</h2>
+    <p>"Gear up, move strong—because performance starts with the right wear."</p>
+    <ul>
+        <li>
+            <img src="img/S_tracksuit.jpg" alt="Tracksuit" width="80">
+            Tracksuit - For only ₱500.00
+            <button onclick="buyItem('Tracksuit', 8, 1)">Buy</button>
+            <button onclick="addToCart('Tracksuit', 8, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/S_leggings.jpg" alt="Leggings" width="80">
+            Leggings - For only ₱99.00
+            <button onclick="buyItem('Leggings', 10, 1)">Buy</button>
+            <button onclick="addToCart('Leggings', 10, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/S_sports bra.jpg" alt="Sports bra" width="80">
+            Sports bra - For only ₱69.00
+            <button onclick="buyItem('Sports bra', 50, 1)">Buy</button>
+            <button onclick="addToCart('Sports bra', 50, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/S_jersey.jpg" alt="Jersey" width="80">
+            Jersey - For only ₱199.00
+            <button onclick="buyItem('Jersey', 4, 1)">Buy</button>
+            <button onclick="addToCart('Jersey', 4, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/S_athletic shorts.jpg" alt="Athletic short" width="80">
+            Athletic short - For only ₱150.00
+            <button onclick="buyItem('Athletic short', 6, 1)">Buy</button>
+            <button onclick="addToCart('Athletic short', 6, 1)">Add to Cart</button>
+        </li>
+    </ul>
+</section>
+
+
+
+
+            <!-- Traditional/Ethnic Wear Section -->
+<section class="category">
+    <h2>Traditional/Ethnic Wear</h2>
+    <p>"Celebrate heritage, wear tradition—timeless elegance for every culture."</p>
+    <ul>
+        <li>
+            <img src="img/T_barong tagalog.jpg" alt="Barong tagalog" width="80">
+            Barong tagalog - For only ₱.00
+            <button onclick="buyItem('Barong tagalog', 2, 1)">Buy</button>
+            <button onclick="addToCart('Barong tagalog', 2, 1)">Add to Cart</button>
+        </li>
+
+        <li>
+            <img src="img/T_kimono.jpg" alt="Kimono" width="80">
+            Kimono - For only ₱150.00
+            <button onclick="buyItem('Kimono', 1, 1)">Buy</button>
+            <button onclick="addToCart('Kimono', 1, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/T_Sari.jpg" alt="Sari" width="80">
+            Sari - For only ₱140.00
+            <button onclick="buyItem('Sari', 0.3, 1)">Buy</button>
+            <button onclick="addToCart('Sari', 0.3, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/T_kilt.jpg" alt="Kilt" width="80">
+            Kilt - For only ₱499.00
+            <button onclick="buyItem('Kilt', 4, 1)">Buy</button>
+            <button onclick="addToCart('Kilt', 4, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/T_dashiki.jpg" alt="Dashiki" width="80">
+            Dashiki - For only ₱299.00
+            <button onclick="buyItem('Dashiki', 4, 1)">Buy</button>
+            <button onclick="addToCart('Dashiki', 4, 1)">Add to Cart</button>
+        </li>
+    </ul>
+</section>
+
+<!-- Outwear Section -->
+<section class="category">
+    <h2>Outwear</h2>
+    <p>"Step out in style, weather any season—protection meets sophistication."</p>
+    <ul>
+        <li>
+            <img src="img/O_jacket.jpg" alt="Jacket" width="80">
+            Jacket - For only ₱399.00
+            <button onclick="buyItem('Jacket', 0.2, 1)">Buy</button>
+            <button onclick="addToCart('Jacket', 0.2, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/O_coat.jpg" alt="Coat" width="80">
+            Coat - For only ₱350.00
+            <button onclick="buyItem('Coat', 15, 1)">Buy</button>
+            <button onclick="addToCart('Coat', 15, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/O_trench coat.jpg" alt="Trench Coat" width="80">
+            Trench Coat - For only ₱499.00
+            <button onclick="buyItem('Trench Coat', 8, 1)">Buy</button>
+            <button onclick="addToCart('Trench Coat', 8, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/O_raincoat.jpg" alt="Raincoat" width="80">
+            Raincoat - For only ₱199.00
+            <button onclick="buyItem('Raincoat', 2, 1)">Buy</button>
+            <button onclick="addToCart('Raincoat', 2, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/O_cardigans.jpg" alt="Cardigans" width="80">
+            Cardigans - For only ₱299.00
+            <button onclick="buyItem('Cardigans', 1, 1)">Buy</button>
+            <button onclick="addToCart('Cardigans', 1, 1)">Add to Cart</button>
+        </li>
+    </ul>
+</section>
+
+
+     <!-- Sleepwear Section -->
+<section class="category">
+    <h2>Sleepwear</h2>
+    <p>"Dream in comfort, wake in style—because restful nights deserve the best."</p>
+    <ul>
+        <li>
+            <img src="img/SW_pajama.jpg" alt="Pajama" width="80">
+            Pajama - For only ₱150.00
+            <button onclick="buyItem('Pajama', 0.2, 1)">Buy</button>
+            <button onclick="addToCart('Pajama', 0.2, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/SW_nightgown.jpg" alt="Nightgown" width="80">
+            Nightgown - For only ₱150.00
+            <button onclick="buyItem('Nightgown', 15, 1)">Buy</button>
+            <button onclick="addToCart('Nightgown', 15, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/SW_robe.jpg" alt="Robe" width="80">
+            Robe - For only ₱99.00
+            <button onclick="buyItem('Robe', 8, 1)">Buy</button>
+            <button onclick="addToCart('Robe', 8, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/SW_sleepshirt.jpg" alt="Sleepshirt" width="80">
+            Sleepshirt - For only ₱89.00
+            <button onclick="buyItem('Sleepshirt', 2, 1)">Buy</button>
+            <button onclick="addToCart('Sleepshirt', 2, 1)">Add to Cart</button>
+        </li>
+    </ul>
+</section>
+
+<!-- Footwear Section -->
+<section class="category">
+    <h2>Footwear</h2>
+    <p>"Step forward in style—because every journey starts with the perfect pair."</p>
+    <ul>
+        <li>
+            <img src="img/FW_sandals.jpg" alt="Sandals" width="80">
+            Sandals - For only ₱150.00
+            <button onclick="buyItem('Sandals', 5, 1)">Buy</button>
+            <button onclick="addToCart('Sandals', 5, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/FW_Boots.jpg" alt="Boots" width="80">
+            Boots - For only ₱250.00
+            <button onclick="buyItem('Boots', 1, 1)">Buy</button>
+            <button onclick="addToCart('Boots', 1, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/FW_Loafers.jpg" alt="Loafers" width="80">
+            Loafers - For only ₱450.00
+            <button onclick="buyItem('Loafers', 3, 1)">Buy</button>
+            <button onclick="addToCart('Loafers', 3, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/FW_flats.jpg" alt="Flats" width="80">
+            Flats - For only ₱199.00
+            <button onclick="buyItem('Flats', 4, 1)">Buy</button>
+            <button onclick="addToCart('Flats', 4, 1)">Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/FW_Heels.jpg" alt="Heels" width="80">
+            Heels - For only ₱199.00
+            <button onclick="buyItem('Heels', 2, 1)">Buy</button>
+            <button onclick="addToCart('Heels', 2, 1)">Add to Cart</button>
+        </li>
+    </ul>
+</section>
+
+
+</div>
+</div>
+
+
+
+
+<script>
+    function buyItem(itemName, pricePerUnit, quantity) {
+        const totalCost = pricePerUnit * quantity;
+        alert(`You bought ${quantity} ${itemName}(s) for a total of ₱${totalCost.toFixed(2)}.`);
+    }
+
+    function addToCart(itemName, pricePerUnit, quantity) {
+        const totalCost = pricePerUnit * quantity;
+        alert(`${quantity} ${itemName}(s) added to your cart for a total of ₱${totalCost.toFixed(2)}.`);
+        // Optional: Add functionality to save the cart data
+        console.log({
+            item: itemName,
+            quantity: quantity,
+            total: totalCost
+        });
+    }
+</script>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-contact">
+            <p>Contact Us: Cjohncarlo160@gmail.com | +63 9690419334</p>
+            <p>San Mateo, Rizal</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=100071407065060&mibextid=ZbWKwL"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/5s_Closet"><img src="img/twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/5s_closet?igsh=MWZ6ZGh2eTllZGxjOA=="><img src="img/instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="footer-newsletter">
+            <form action="/subscribe" method="post">
+                <label for="email">Subscribe to our newsletter:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Cinco's Closet. All rights reserved.</p>
+        </div>
+    </footer>
+
+     <script src="Java script/cinco.js"> </script>
+
+</body>
+</html>

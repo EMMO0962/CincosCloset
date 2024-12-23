@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/aboutus.css">
+
+</head>
+<body>
+
+    <br><br>
+    
+   <!-- Header Section -->
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="Company Logo">
+        <span class="logo-text">Cinco's Closet.</span>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="ouraim.html">Our Aim</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="login.html">Log In</a></li>
+        </ul>
+    </nav>
+
+    <div style="position: relative;">
+        <input type="text" id="searchInput" placeholder="Search for words..." />
+        <button id="searchButton">Search</button>
+        <div id="resultsBox" style="display: none;">
+            <!-- Matching results will appear here -->
+        </div>
+    </div>
+    
+    <style>
+        #resultsBox {
+            position: absolute; /* Keeps it relative to the search bar container */
+            top: 40px; /* Adjusts position below the search bar */
+            left: 0; /* Aligns with the search bar */
+            width: 100%; /* Matches the width of the container */
+            max-height: 200px; /* Limits the height */
+            overflow-y: auto; /* Adds scrolling if needed */
+            background-color: #f9f9f9; /* Light background */
+            border: 1px solid #ccc; /* Border for visibility */
+            padding: 10px; /* Spacing inside */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            z-index: 1000; /* Ensures it appears above other elements */
+        }
+    
+        #resultsBox div {
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer; /* Makes it clear that items are clickable */
+        }
+    
+        #resultsBox div:hover {
+            background-color: #eaeaea; /* Highlight on hover */
+        }
+    
+        #resultsBox div:last-child {
+            border-bottom: none;
+        }
+    </style>
+    
+    
+
+    <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="https://www.instagram.com/5s_closet?igsh=MWZ6ZGh2eTllZGxjOA==">Instagram</a>
+        <a href="https://x.com/5s_Closet">Twitter</a>
+    </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Business</h1>
+            <p>We provide the best products and services to help you succeed.</p>
+           
+        </div>
+    </section>
+
+    <!-- About Us / Introduction Section -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>We are a leading company focused on delivering exceptional value to our customers. Our passion drives us to continuously improve and innovate.</p>
+    <div class="core-values">
+        <div class="value">
+            <h3>Integrity</h3>
+            <p>We value honesty and transparency in all of our dealings.</p>
+        </div>
+        <div class="value">
+            <h3>Customer-Centric</h3>
+            <p>Your satisfaction is our top priority.</p>
+        </div>
+        <div class="value">
+            <h3>Innovation</h3>
+            <p>We embrace change and continuously evolve to meet your needs.</p>
+        </div>
+    </div>
+
+    <h3>Meet the Team</h3>
+    <div class="team">
+        <div class="team-member">
+            <img src="images/Moyo.jpg" alt="Team Member 1" onclick="openModal('John Mark Moyo', 'CEO & Founder', 'John is the visionary leader behind our company\'s growth and success.', 'images/Moyo.jpg')">
+            <h4>John Mark Moyo</h4>
+            <p>CEO & Founder</p>
+        </div>
+        <div class="team-member">
+            <img src="images/Cinco.jpg" alt="Team Member 2" onclick="openModal('John Carlo Cinco', 'Marketing Director', 'Jane brings her marketing expertise to help us grow our brand.', 'images/Cinco.jpg')">
+            <h4>John Carlo Cinco</h4>
+            <p>Marketing Director</p>
+        </div>
+        <div class="team-member">
+            <img src="images/Pangilinan.jpg" alt="Team Member 3" onclick="openModal('Inigo Luis Pangilinan', 'Product Manager', 'Mark ensures that our products meet the highest standards of quality.', 'images/Pangilinan.jpg')">
+            <h4>Inigo Luis Pangilinan</h4>
+            <p>Product Manager</p>
+        </div>
+        <div class="team-member">
+            <img src="images/Acosta.jpg" alt="Team Member 4" onclick="openModal('Zacchaeus Dave Acosta', 'Lead Designer', 'Emily leads the creative design process, shaping the user experience.', 'images/Acosta.jpg')">
+            <h4>Zacchaeus Dave Acosta</h4>
+            <p>Lead Designer</p>
+        </div>
+        <div class="team-member">
+            <img src="images/Wisdom.jpg" alt="Team Member 5" onclick="openModal('Thatcher Adekunle Wisdom', 'Chief Technical Officer', 'Chris oversees all technical aspects of our products and services.', 'images/Wisdom.jpg')">
+            <h4>Thatcher Adekunle Wisdom</h4>
+            <p>Chief Technical Officer</p>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="teamModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Team Member">
+            <h4 id="modalName"></h4>
+            <p id="modalPosition"></p>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+    
+    
+    
+</section>
+
+    <!-- Testimonials Section -->
+<section id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial">
+            <p>"I found amazing pieces at unbeatable prices! The quality of the clothes was fantastic, and the customer service was top-notch!"</p>
+            <p>- Jenny Lee</p>
+        </div>
+        <div class="testimonial">
+            <p>"I was skeptical at first about buying second-hand online, but this store exceeded all my expectations. The clothes were in great condition and exactly as described!"</p>
+            <p>- Mark Reyes</p>
+        </div>
+        <div class="testimonial">
+            <p>"I'm obsessed with the unique items I found! It's like treasure hunting for stylish clothes without breaking the bank. Highly recommend!"</p>
+            <p>- Sophie Ramos</p>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li><strong>Expertise</strong>: We have years of experience in the industry.</li>
+            <li><strong>Reliability</strong>: You can always count on us to deliver.</li>
+            <li><strong>Quality</strong>: Our products are top-quality and guaranteed to meet your needs.</li>
+        </ul>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-contact">
+            <p>Contact Us: Cjohncarlo160@gmail.com | +63 9690419334</p>
+            <p>San Mateo, Rizal</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=100071407065060&mibextid=ZbWKwL"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/5s_Closet"><img src="img/twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/5s_closet?igsh=MWZ6ZGh2eTllZGxjOA=="><img src="img/instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="footer-newsletter">
+            <form action="/subscribe" method="post">
+                <label for="email">Subscribe to our newsletter:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="Java script/aboutus.js"> </script>
+</body>
+</html>

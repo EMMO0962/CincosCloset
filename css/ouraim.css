@@ -1,0 +1,462 @@
+body {
+    min-height: 100vh;
+    margin: 0; /* Avoid unwanted scrollbars */
+    position: relative; /* Make sure the pseudo-element is relative to the body */
+}
+
+body::before {
+    content: "";
+    position: absolute; /* Ensures the pseudo-element covers the entire body */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/back.jpg'); /* Replace with the correct image path */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-color: rgba(0, 0, 0, 0.8); /* Adds a dark dimming overlay */
+    z-index: -1; /* Ensures it stays behind other content */
+}
+
+
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Services Section */
+#services {
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+#services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service {
+    background: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.service h3 {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    color: #e74c3c;
+}
+
+.service p {
+    margin: 1rem 0;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    color: #fff;
+    background: #e74c3c;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #333;
+}
+
+/* Testimonials Section */
+#testimonials {
+    background: #e74c3c;
+    color: #fff;
+}
+
+#testimonials p {
+    margin: 0.5rem 0;
+    font-style: italic;
+}
+
+/* Why Choose Us Section */
+#why-choose-us {
+    background: #333;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+#why-choose-us h2 {
+    color: #e74c3c;
+}
+
+#why-choose-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+#why-choose-us li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+#why-choose-us strong {
+    color: #e74c3c;
+}
+
+/* Blog Section */
+#blog {
+    background: #fff;
+}
+
+.blog-snippets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.blog-post {
+    background: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.blog-post h3 {
+    font-size: 1.2rem;
+}
+
+.blog-post p {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+/* Call to Action Section */
+#cta {
+    background: #e74c3c;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    color: #fff;
+    background: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background: #555;
+}
+
+
+/* Header Section */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #333, #444); /* Gradient background */
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust the body to avoid content being hidden behind the fixed header */
+body {
+    margin-top: 80px; /* Adjust this value based on the header height */
+}
+
+/* Adjust the body to avoid content being hidden behind the fixed header */
+body {
+    margin-top: 80px; /* Adjust this value based on the header height */
+}
+
+/* Logo Section */
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 80px; /* Set logo width */
+    height: auto;
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-left: 10px; /* Adds space between logo image and text */
+}
+
+/* Navigation Section */
+header nav {
+    margin-left: auto; /* Pushes nav to the right */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-right: 15px; /* Spacing between items */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px; /* Smaller font size */
+    letter-spacing: 1px;
+    font-weight: normal; /* Lighter font weight */
+}
+
+header nav ul li a:hover {
+    color: #e74c3c; /* Hover effect for menu items */
+}
+
+/* Call to Action Button */
+header .cta-btn a {
+    background: #e74c3c;
+    padding: 7px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+header .cta-btn a:hover {
+    background: #c0392b;
+}
+
+/* Social Media Icons */
+header .social-media {
+    display: flex;
+    align-items: center;
+}
+
+header .social-media a {
+    color: white;
+    margin-left: 15px;
+    font-size: 12px; /* Smaller font size for social media links */
+    transition: color 0.3s ease;
+}
+
+header .social-media a:hover {
+    color: #e74c3c;
+}
+
+/* Search Bar Section */
+header .search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 30px; /* Adds spacing between items */
+}
+
+header .search-bar input {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+header .search-bar input:focus {
+    border-color: #e74c3c;
+    outline: none;
+}
+
+header .search-bar button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header .search-bar button:hover {
+    background-color: #c0392b;
+}
+
+
+/* General Boxed Section Styles */
+section {
+    border: 2px solid #ddd; /* Adds a light gray border */
+    border-radius: 10px; /* Rounds the corners */
+    background-color: #f9f9f9; /* Light background color */
+    padding: 20px; /* Adds inner spacing */
+    margin-bottom: 20px; /* Adds spacing between sections */
+    margin-top: 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Individual Section Styles */
+section h2 {
+    font-size: 1.8rem; /* Larger font size for headings */
+    margin-bottom: 10px; /* Spacing below the heading */
+    color: #333; /* Dark gray text color */
+}
+
+section p, section ul {
+    font-size: 1rem; /* Standard font size */
+    color: #555; /* Medium gray text color */
+    line-height: 1.6; /* Improves readability */
+}
+
+section ul {
+    list-style-type: disc; /* Adds bullets to lists */
+    padding-left: 20px; /* Indents list items */
+}
+
+section img {
+    max-width: 100%; /* Ensures images are responsive */
+    border-radius: 5px; /* Rounds image corners */
+    margin-top: 15px; /* Adds spacing above the image */
+}
+
+/* CTA Button Styles */
+section.cta {
+    text-align: center; /* Centers the button */
+    background-color: #fff; /* Different background for emphasis */
+    border: none; /* Removes border */
+    box-shadow: none; /* Removes shadow */
+}
+
+section.cta .btn {
+    display: inline-block;
+    background-color: #ff5722; /* Bright button color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Adds inner spacing */
+    border-radius: 5px; /* Rounds button corners */
+    text-decoration: none; /* Removes underline */
+    font-size: 1rem; /* Standard button font size */
+    font-weight: bold; /* Emphasizes the button */
+    transition: background-color 0.3s; /* Smooth color transition */
+}
+
+section.cta .btn:hover {
+    background-color: #ff3d00; /* Darker hover color */
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-contact,
+footer .footer-links,
+footer .footer-social,
+footer .footer-newsletter,
+footer .footer-accessibility {
+    margin-bottom: 15px;
+}
+
+footer img {
+    width: 20px;
+    margin: 0 5px;
+}
+
+footer form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer input[type="email"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    width: 250px;
+}
+
+footer button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #45a049;
+}
